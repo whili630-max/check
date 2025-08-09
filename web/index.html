@@ -5,17 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <base href="/">
   <title>Bunyan</title>
-  <meta name="bunyan-build" content="v1-fix-flutterjs">
 </head>
 <body>
   <div id="loading">جاري تحميل التطبيق...</div>
 
-  <script>var serviceWorkerVersion = null;</script>
   <script src="flutter.js"></script>
   <script>
     window.addEventListener("load", function () {
       _flutter.loader.loadEntrypoint({
-        serviceWorker: { serviceWorkerVersion: serviceWorkerVersion }
+        serviceWorker: { serviceWorkerVersion: {{flutter_service_worker_version}} }
       })
       .then(function (engineInitializer) {
         return engineInitializer.initializeEngine();
